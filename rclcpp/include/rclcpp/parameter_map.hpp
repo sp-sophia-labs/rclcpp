@@ -39,7 +39,7 @@ using ParameterMap = std::unordered_map<std::string, std::vector<Parameter>>;
 /// \throws InvalidParametersException if the `rcl_params_t` is inconsistent or invalid.
 RCLCPP_PUBLIC
 ParameterMap
-parameter_map_from(const rcl_params_t * const c_params);
+parameter_map_from(const rcl_params_t * const c_params, const char * node_fqn = nullptr);
 
 /// Convert parameter value from rcl_yaml_param_parser into a C++ class instance.
 /// \param[in] c_value C structure containing a value of a parameter.
